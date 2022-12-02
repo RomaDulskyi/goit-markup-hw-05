@@ -149,7 +149,7 @@ address {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -0.25px;   /*-при -1px синя лінія починає виходити за межі хедера-*/
     width: 100%;
     height: 4px;
     background-color: #2196F3;
@@ -448,14 +448,15 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .social-links:hover,
 .social-links:focus {
     background-color: #2196F3;
+    color:#ffffff;
   
 }
 
-.social-links:hover .social-icon,
+/*.social-links:hover .social-icon,
 .social-links:focus .social-icon {
     fill: #ffffff;
    
-}
+}*/
 
 /*---Постійні клієнти---*/
 
@@ -490,8 +491,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
@@ -510,10 +510,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid #2196F3;
 }
 
-.client-links:hover .client-icon,
+/*.client-links:hover .client-icon,
 .client-links:focus .client-icon {
     color: #2196F3;
-}
+}*/
 
 
 
@@ -575,6 +575,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-block {
@@ -801,7 +802,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
         border-box 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-link:hover .projects-focus {
+.projects-link:hover .projects-focus,
+.projects-link:focus .projects-focus {
     transform: translateY(0);
     transition: transform 250ms linear;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -817,7 +819,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     position: absolute;
     top: 0;
     height: 100%;
-    padding: 63px 24px;
+    padding: 0 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5555;
@@ -826,4 +828,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     transform: translateY(100%);
     transition: transform 250ms linear;
     overflow: auto;
+    display: flex;
+    align-items: center;
+    
 }
